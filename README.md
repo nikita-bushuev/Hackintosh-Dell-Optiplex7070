@@ -3,7 +3,7 @@
 Modified [OpenCore EFI from webleon for Dell Optiplex 7070 SFF](https://github.com/webleon/Hackintosh-OptiPlex-7070-SFF) with fixes for WiFi, Bluetooth and GPU (RX Radeon 550 Lexa Core).  
 What is working: everything.
 
-<img src="https://raw.githubusercontent.com/nikita-bushuev/Hackintosh-Dell-Optiplex7070/main/Images/About-OS.png?token=GHSAT0AAAAAABUOJVFXJ6ZMQFOSOXE52JX4YUKVVNQ" />
+<img src="https://raw.githubusercontent.com/nikita-bushuev/Hackintosh-Dell-Optiplex7070/main/Images/About-OS.png?token=GHSAT0AAAAAABUOJVFWT4CK37WA6WSIAUZMYUKXJEA" />
 
 ## Verified Specification
 
