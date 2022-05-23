@@ -1,7 +1,10 @@
 # OpenCore EFI for Dell Optiplex 7070 SFF
 
-Modified [OpenCore EFI from webleon for Dell Optiplex 7070 SFF](https://github.com/webleon/Hackintosh-OptiPlex-7070-SFF) with fixes for WiFi, Bluetooth and GPU (RX Radeon 550 Lexa Core).  
-What is working: everything.
+> Modified [OpenCore EFI from webleon for Dell Optiplex 7070 SFF](https://github.com/webleon/Hackintosh-OptiPlex-7070-SFF) with fixes for WiFi, Bluetooth and GPU (RX Radeon 550 Lexa Core).  
+
+:white_check_mark: **What's working:** everything \
+:desktop_computer: **macOS version**: 12.4 (21F79) \
+:gear: **OpenCore version**: 0.8.0
 
 <img src="https://raw.githubusercontent.com/nikita-bushuev/Hackintosh-Dell-Optiplex7070/main/Images/About-OS.png?token=GHSAT0AAAAAABUOJVFWT4CK37WA6WSIAUZMYUKXJEA" />
 
@@ -19,9 +22,6 @@ What is working: everything.
 | OS Disk (SATA)   | *Corsair Force LE SSD (SATA-III) 256GB      |
 
 *Bundled Samsug NVMe PM891a SSD was replaced with Corsair Force SATA SSD. PM891a is NOT supported in macOS BigSur/Monterey and causes bootloops during installation.
-
-**macOS version**: 12.4 (21F79) \
-**OpenCore version**: 0.8.0
 
 ## Installation
 
@@ -41,12 +41,6 @@ What is working: everything.
 
 - Set Pre-Allocated DVMT to 64M: `setup_var 0x8DC 0x02`
 - Disable CFG lock: `setup_var 0x5BE 0x00`
-
-### Bootable USB
-
-1. Follow [this guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) to create your bootable USB.
-
-2. Clone this repository and copy "BOOT" & "OC" directories to your "EFI" directory on your bootable USB. The structure should look somewhat like this: `EFI -> BOOT, OC`.
 
 ### GPU configuration
 - Radeon RX 550 (with Lexa core):  
@@ -72,7 +66,13 @@ Remove GPU node from `EFI/OC/config.plist`: `DeviceProperties` → `Add` → `Pc
   - _SystemUUID_ - SmUUID
 - _ROM_ entry should be set to your [network card's MAC address](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer), without separators (e. g. `:`, `-`).
 
-### After Installation
+### Bootable USB
+
+1. Follow [this guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) to create your bootable USB.
+
+2. Clone this repository and copy "BOOT" & "OC" directories to your "EFI" directory on your bootable USB. The structure should look somewhat like this: `EFI -> BOOT, OC`.
+
+## Post-Install
 
 Follow [this guide](https://dortania.github.io/OpenCore-Post-Install/universal/update.html#_2-mount-your-efi) to mount your hard drive's EFI partition. However Dell motherboard doesn't see it automatically. We need add it manually through the BIOS.  
 Go to `General` -> `Boot Sequence` -> `Add Boot Option`.  
